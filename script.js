@@ -32,6 +32,8 @@ function getWorkout(){
     return workout;
 };
 
+
+// Seems a bit too long
 function addWorkoutToTable(workout){
     if (document.getElementById("workout-table")) {
         const table = document.getElementById("workout-table");
@@ -39,10 +41,12 @@ function addWorkoutToTable(workout){
         for (const [key, value] of Object.entries(workout)) {
             if (key !== "id") {
                 const newCell = document.createElement("td");
+                newCell.contentEditable="true";
                 newCell.textContent = value;
                 newRow.appendChild(newCell);   
             }
         }
+        // Add a remove button
         const removeButton = document.createElement("button");
         removeButton.textContent = "🗑️";
         removeButton.addEventListener("click", function(){
@@ -50,8 +54,8 @@ function addWorkoutToTable(workout){
             row.remove();
             removeWorkoutFromDB(workout);
         });
-        const buttonCell = document.createElement("td");
-        newRow.appendChild(buttonCell).appendChild(removeButton);
+        const removeButtonCell = document.createElement("td");
+        newRow.appendChild(removeButtonCell).appendChild(removeButton);
         table.querySelector("tbody").appendChild(newRow);
     }
 };
@@ -63,11 +67,27 @@ function saveWorkoutToDb(workout){
 };
 
 function removeWorkoutFromDB(workout) {
-    const workoutId = workout.id;
     const allWorkouts = JSON.parse(localStorage.getItem("workouts"));
-    const idToRemove = allWorkouts.findIndex((w) => w.id === workoutId);
+    const idToRemove = allWorkouts.findIndex((w) => w.id === workout.id);
     if (idToRemove > -1) {
         allWorkouts.splice(idToRemove, 1);
     }
     localStorage.setItem("workouts", JSON.stringify(allWorkouts));
+};
+
+function editWorkout(workoutId, currentRow) {
+    const allWorkouts = JSON.parse(localStorage.getItem("workouts"));
+    const idToEdit = allWorkouts.findIndex((w) => w.id === workoutId);
+    console.log(currentRow);
+    if (idToEdit > -1) {
+        console.log(allWorkouts[idToEdit]);
+        // allWorkouts.splice(idToRemove, 1);
+    }
+    // const workout = all of the row
+    // saveWorkoutToDb()
+
+};
+
+function turnRowIntoForm(tableRow) {
+    tableRow
 };

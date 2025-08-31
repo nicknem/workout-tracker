@@ -1,5 +1,26 @@
+html {
+    background-color: rgb(233, 244, 255);
+}
+
 body {
+    border: 5px solid black;
+    width: 600px;
+    font-family:sans-serif;
     text-align: center;
+    margin: 0 auto;
+    background-color: #ffdba8;
+    padding: 0 20px 20px 20px;
+}
+
+h1 {
+    background-color: red;
+    margin: 0;
+    padding: 20px 0;
+    font-size: 30px;
+}
+
+.component {
+    padding-top: 5%;
 }
 
 form {
@@ -10,7 +31,6 @@ form {
 
 table {
     margin: auto;
-    border: 1px solid black;
 }
 
 #workout-history
