@@ -14,12 +14,13 @@
         <label for="date" >Date: </label>
         <input 
             type="date" 
+            class="workout-input"
             id="date" 
             value="2025-08-31"
             min="2025-08-31"
             required /> 
         <label for="exercise">Exercise: </label>
-        <select name="exercise" id="exercise">
+        <select name="exercise" class="workout-input" id="exercise">
             <option value ="Bench Press">Bench Press</option>
             <option value="Smith Machine">Smith Machine</option>
             <option value="Leg Press">Leg Press</option>
@@ -27,7 +28,8 @@
         </select>
         <label for="weight">Weight (kg): </label>
         <input 
-            type="number" 
+            type="number"
+            class="workout-input" 
             id="weight" 
             value="40" 
             min="10"
@@ -35,6 +37,7 @@
         <label for="series">Series: </label>
         <input 
             type="number" 
+            class="workout-input" 
             id="series" 
             value="4" 
             min ="1"
@@ -42,12 +45,16 @@
         <label for="reps">Reps: </label>
         <input 
             type="number" 
+            class="workout-input" 
             id="reps" 
             value="8" 
             min="1"
             required />
         <label for="success">Success: </label>
-        <input type="text" id="success" value="Yes" required />
+        <select name="success" class="workout-input" id="success">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
         <input type="submit" value="Submit" id="submit-btn" /> 
     </form>
 </div>
