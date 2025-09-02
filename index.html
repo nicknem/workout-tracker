@@ -7,69 +7,76 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="component">
-    <h1>Enter today's workout here:</h1>
-    
-    <form id="form">
-        <label for="date" >Date: </label>
-        <input 
-            type="date" 
-            class="workout-input"
-            id="date" 
-            value="2025-08-31"
-            min="2025-08-31"
-            required /> 
-        <label for="exercise">Exercise: </label>
-        <select name="exercise" class="workout-input" id="exercise">
-            <option value ="Bench Press">Bench Press</option>
-            <option value="Smith Machine">Smith Machine</option>
-            <option value="Leg Press">Leg Press</option>
-            <option value="Pull">Pull</option>
-        </select>
-        <label for="weight">Weight (kg): </label>
-        <input 
-            type="number"
-            class="workout-input" 
-            id="weight" 
-            value="40" 
-            min="10"
-            required />
-        <label for="series">Series: </label>
-        <input 
-            type="number" 
-            class="workout-input" 
-            id="series" 
-            value="4" 
-            min ="1"
-            required />
-        <label for="reps">Reps: </label>
-        <input 
-            type="number" 
-            class="workout-input" 
-            id="reps" 
-            value="8" 
-            min="1"
-            required />
-        <label for="success">Success: </label>
-        <select name="success" class="workout-input" id="success">
-            <option value="Yes">Yes</option>
-            <option value="No">No</option>
-        </select>
-        <input type="submit" value="Submit" id="submit-btn" /> 
-    </form>
-</div>
-    <div class="component">
-    <h1>Previous workouts:</h1>
-    <table id="workout-table">
-        <tr>
-            <th>Date</th>
-            <th>Exercise</th>
-            <th>Weight</th>
-            <th>Series</th>
-            <th>Reps</th>
-            <th>Success</th>
-        </tr>
-    </table>
+    <div class="container">
+        <div class="component">
+        <h1>Enter today's workout here:</h1>
+        
+        <form id="form">
+            <label for="date" >Date: </label>
+            <input 
+                type="date" 
+                class="workout-input"
+                id="date" 
+                value="2025-08-31"
+                min="2025-08-31"
+                required /> 
+            <label for="exercise">Exercise: </label>
+            <select name="exercise" class="workout-input" id="exercise">
+                <option value ="Bench Press">Bench Press</option>
+                <option value="Smith Machine">Smith Machine</option>
+                <option value="Leg Press">Leg Press</option>
+                <option value="Pull">Pull</option>
+            </select>
+            <label for="weight">Weight (kg): </label>
+            <select name="weight" class="workout-input" id="weight">
+                <option value="35">35</option>
+                <option value="40">40</option>
+                <option value="50">50</option>
+                <option value="60">60</option>
+                <option value="70">70</option>
+                <option value="80">80</option>
+            </select>
+            <label for="series">Series: </label>
+            <select name="series" class="workout-input" id="series">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <label for="reps">Reps: </label>
+            <select name="reps" class="workout-input" id="reps">
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+            <label for="success">Success: </label>
+            <select name="success" class="workout-input" id="success">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+            <input type="submit" value="Submit" id="submit-btn" /> 
+        </form>
+    </div>
+        <div class="component">
+        <h1>Previous workouts:</h1>
+        <table id="workout-table">
+            <tr>
+                <th>Date</th>
+                <th>Exercise</th>
+                <th>Weight</th>
+                <th>Series</th>
+                <th>Reps</th>
+                <th>Success</th>
+            </tr>
+        </table>
+        </div>
     </div>
 </body>
 <script src="script.js"></script>
