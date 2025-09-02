@@ -12,18 +12,27 @@ body {
     font-family:sans-serif;
     text-align: center;
     margin: 0;
-    overflow: hidden;
     padding: 0 20px 20px 20px;
 }
 
-input, select, button {
-    font-size: 16px;
+select, input, label{
+    font-size: 40px;
 }
+
+label{
+    font-weight: bold;
+}
+
+
 
 .container {
-
+    height: 90vh;
+    padding-top: 30px;  
+    display: grid;
     margin: 40px;
+    border: 1px solid black;
 }
+
 
 table {
     text-align: center;
@@ -32,10 +41,8 @@ table {
 h1 {
     margin: 0;
     padding: 20px 0;
-    font-size: 30px;
+    font-size: 5em;
 }
-
-
 
 form {
     display: grid;
@@ -43,25 +50,24 @@ form {
     margin: auto;
 }
 .workout-input {
-    width: 200px;
-    height: 25px;
+    width: 30vw;
+    height: 5vh;
     text-align: center;
     display: grid;
+    border: 3px solid #ff84ef;
 }
 
-input {
+input, select, table {
     margin: auto;
-}
+}   
 
-select {
-    margin:auto;
-}
-
-table {
-    margin: auto;
-}
-
-#workout-history
-{
-    text-align: center;
+#submit-btn {
+    margin-top: 30px;
+    width: 30vw;
+    height: 5vh;
+    padding: 20px;
+    border: 5px solid rgb(0, 0, 0);
+    border-radius: 5%;
+    background-color: rgb(76, 218, 37);
+    color: white;
 }
