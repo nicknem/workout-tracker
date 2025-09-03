@@ -1,6 +1,8 @@
 
 window.onload = function() {
-    populateTable();   
+    populateTable();
+    const today = getTodayDate();   
+    setTodayDate(today);
 }
 
 document.getElementById("form").addEventListener("submit", function(event){
@@ -10,6 +12,28 @@ document.getElementById("form").addEventListener("submit", function(event){
     addWorkoutToTable(workout);
 
 });
+
+function getTodayDate() {
+    const today = new Date();
+    const year = today.getFullYear();
+    let month = today.getMonth() + 1;
+    let day = today.getDate();
+    function formatDate(date){
+        if (date<10) {return "0" + date};
+        return date;
+    }
+    month = formatDate(month);
+    day = formatDate(day);
+    const formattedDate = `${year}-${month}-${day}`
+    return formattedDate;
+    
+}
+
+function setTodayDate(today) {
+    document.getElementById("date").value = today;
+
+}
+
 
 function populateTable(){
     const workouts = JSON.parse(localStorage.getItem("workouts"));

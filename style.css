@@ -1,3 +1,5 @@
+
+
 * {
     box-sizing: border-box;
 }   
@@ -28,28 +30,38 @@ label{
 .container {
     height: 90vh;
     padding-top: 30px;  
+    padding-bottom:30px;  
     display: grid;
     margin: 40px;
-    border: 1px solid black;
+
+
 }
 
 .component {
     margin: 20px;
-
 }
 
 
 
 
 table {
+    border-collapse: collapse;
     text-align: center;
     font-size: 30px;;
-    width: 60vw;
+    width: 100%; 
 }
 
-tr {
-    border: 2px solid black;
+td, th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
 }
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
 
 h1 {
     margin: 0;  
@@ -67,7 +79,7 @@ form {
     height: 5vh;
     text-align: center;
     display: grid;
-    border: 3px solid #000000;
+    border: 1px solid #5e5e5e;
 }
 
 input, select, table {
@@ -79,7 +91,7 @@ input, select, table {
     width: 30vw;
     height: 5vh;
     padding: 20px;
-    border: 5px solid rgb(0, 0, 0);
+    border: 3px solid rgb(44, 44, 44);
     border-radius: 5%;
     background-color: rgb(76, 218, 37);
     color: white;
