@@ -18,14 +18,12 @@ body {
 }
 
 select, input, label{
-    font-size: 40px;
+    font-size: 2rem;
 }
 
 label{
     font-weight: bold;
 }
-
-
 
 .container {
     height: 90vh;
@@ -33,21 +31,16 @@ label{
     padding-bottom:30px;  
     display: grid;
     margin: 40px;
-
-
 }
 
 .component {
     margin: 20px;
 }
 
-
-
-
 table {
     border-collapse: collapse;
     text-align: center;
-    font-size: 30px;;
+    font-size: 1em;;
     width: 100%; 
 }
 
@@ -66,7 +59,7 @@ th {
 h1 {
     margin: 0;  
     padding: 20px 0;
-    font-size: 5em;
+    font-size: 3em;
 }
 
 form {
@@ -75,11 +68,12 @@ form {
     margin: auto;
 }
 .workout-input {
-    width: 30vw;
+    width: 20rem;
     height: 5vh;
     text-align: center;
     display: grid;
     border: 1px solid #5e5e5e;
+    max-width: 100%
 }
 
 input, select, table {
@@ -88,9 +82,8 @@ input, select, table {
 
 #submit-btn {
     margin-top: 30px;
-    width: 30vw;
+    width: 20rem;
     height: 5vh;
-    padding: 20px;
     border: 3px solid rgb(44, 44, 44);
     border-radius: 5%;
     background-color: rgb(76, 218, 37);
