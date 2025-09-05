@@ -1,8 +1,21 @@
 
+:root {
+  --light-grey: #f5f6f7;
+  --dark-blue: #0a0a23;
+  --fcc-blue: #1b1b32;
+  --light-yellow: #fecc4c;
+  --dark-yellow: #feac32;
+  --light-pink: #ffadad;
+  --dark-red: #850000;
+  --light-green: #acd157;
+}
 
 * {
     box-sizing: border-box;
 }   
+
+
+
 
 html {
     background-color: rgb(233, 244, 255);
@@ -13,12 +26,10 @@ body {
     width: 100%;
     font-family:sans-serif;
     text-align: center;
-    margin: 0;
-    padding: 0 20px 20px 20px;
 }
 
 select, input, label{
-    font-size: 2rem;
+    font-size: 1rem;
 }
 
 label{
@@ -27,26 +38,23 @@ label{
 
 .container {
     height: 90vh;
-    padding-top: 30px;  
-    padding-bottom:30px;  
     display: grid;
-    margin: 40px;
 }
 
 .component {
-    margin: 20px;
+    max-width: 100%;
 }
 
 table {
     border-collapse: collapse;
     text-align: center;
-    font-size: 1em;;
-    width: 100%; 
+    font-size: 0.8em;;
+    width: 80%;
 }
 
 td, th {
     border: 1px solid #ddd;
-    padding: 8px;
+    padding: 6px;
     text-align: center;
 }
 
@@ -57,35 +65,37 @@ th {
 
 
 h1 {
-    margin: 0;  
-    padding: 20px 0;
-    font-size: 3em;
+    margin: 0 auto;  
+    padding: 1em 1em;
+    font-size: 2em;
+    width: 100%
 }
 
 form {
     display: grid;
-    padding: 2em 4em 2em 4em;
     margin: auto;
-}
-.workout-input {
-    width: 20rem;
-    height: 5vh;
-    text-align: center;
-    display: grid;
-    border: 1px solid #5e5e5e;
-    max-width: 100%
 }
 
 input, select, table {
     margin: auto;
 }   
 
+.workout-input {
+    width: 8rem;
+    height: 4vh;
+    text-align: center;
+    display: grid;
+    border: 1px solid #5e5e5e;
+    max-width: 100%;
+}
+
 #submit-btn {
     margin-top: 30px;
-    width: 20rem;
+    width: 8rem;
     height: 5vh;
     border: 3px solid rgb(44, 44, 44);
     border-radius: 5%;
     background-color: rgb(76, 218, 37);
     color: white;
+    max-width: 100%;
 }
