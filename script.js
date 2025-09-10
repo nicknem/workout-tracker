@@ -1,4 +1,3 @@
-
 window.onload = function() {
     populateTable();
     const today = getTodayDate();   
